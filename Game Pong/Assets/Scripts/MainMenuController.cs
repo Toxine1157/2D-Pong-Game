@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     public void PlayGame()
     {
+        Debug.Log("Created by Samuel Allhert - 149251970101-13");
         SceneManager.LoadScene("Game");
     }
 
