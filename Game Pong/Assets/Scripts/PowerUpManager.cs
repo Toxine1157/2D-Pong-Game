@@ -16,6 +16,7 @@ public class PowerUpManager : MonoBehaviour
 
     public int spawnInterval;
     private float timer;
+    public int deleteInterval;
     private float deleteTimer;
 
     public void GenerateRandomPowerUp()
@@ -70,7 +71,7 @@ public class PowerUpManager : MonoBehaviour
     {
         powerUpList = new List<GameObject>();
         timer = 0;
-        deleteTimer = 15;
+        deleteTimer = 0;
     }
 
     // Update is called once per frame
@@ -84,12 +85,12 @@ public class PowerUpManager : MonoBehaviour
             timer -= spawnInterval;
         }
 
-        deleteTimer -= Time.deltaTime;
+        deleteTimer += Time.deltaTime;
 
-        if(deleteTimer < spawnInterval)
+        if(deleteTimer > deleteInterval)
         {
             RemoveUnpickedPowerUp(gameObject);
-            deleteTimer += spawnInterval;
+            deleteTimer -= deleteInterval;
         }
     }
 }
