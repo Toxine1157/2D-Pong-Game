@@ -1142,7 +1142,8 @@ MonoBehaviour:
   maxPowerUpAmount: 2
   powerUpAreaMin: {x: -7.5, y: -4}
   powerUpAreaMax: {x: 7.5, y: 4}
-  spawnInterval: 4
+  spawnInterval: 1
+  deleteInterval: 10
 --- !u!1 &1541287229
 GameObject:
   m_ObjectHideFlags: 0
