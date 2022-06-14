@@ -12,6 +12,11 @@ public class BallController : MonoBehaviour
     {
         transform.position = new Vector3(resetPosition.x, resetPosition.y, 2);
     }
+
+    public void ActivatePUSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
+    }
     // Start is called before the first frame update
     private void Start()
     {
