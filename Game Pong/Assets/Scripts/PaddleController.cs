@@ -8,6 +8,8 @@ public class PaddleController : MonoBehaviour
     public KeyCode upKey;
     public KeyCode downKey;
     private Rigidbody2D rig;
+    Vector3 skala;//
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -40,7 +42,39 @@ public class PaddleController : MonoBehaviour
     //move object
     private void MoveObject(Vector2 movement)
     {
-        Debug.Log("TEST: " + movement);
+        //Debug.Log("TEST: " + movement);
         rig.velocity = movement;
-    }   
+    }
+
+    public void LengthenPaddle(int longer) //
+    {
+        skala = transform.localScale;
+
+        skala.y *= longer;
+
+        transform.localScale = skala;
+
+        Invoke("ShortenPaddle", 5f);
+    }
+
+    public void ShortenPaddle()
+    {
+        skala = transform.localScale;
+
+        skala.y /= 2;
+
+        transform.localScale = skala;
+    }
+
+    public void FasterPaddle(int faster)
+    {
+        speed *= faster;
+
+        Invoke("SlowerPaddle", 5f);
+    }
+
+    public void SlowerPaddle()
+    {
+        speed /= 2;
+    }//
 }
