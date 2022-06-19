@@ -1589,8 +1589,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpTemplateList:
-  - {fileID: 475581840}
-  - {fileID: 475581840}
+  - {fileID: 390105992}
+  - {fileID: 1319295328}
   - {fileID: 475581840}
   spawnArea: {fileID: 0}
   maxPowerUpAmount: 2
