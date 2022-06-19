@@ -16,6 +16,15 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Developed by Toxine");
     }
 
+    public void GameCredit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
     // Start is called before the first frame update
     void Start()
     {

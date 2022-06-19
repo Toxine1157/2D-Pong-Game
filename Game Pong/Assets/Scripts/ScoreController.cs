@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
@@ -9,6 +10,11 @@ public class ScoreController : MonoBehaviour
     public Text skorKanan;
 
     public ScoreManager manager;
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
     // Start is called before the first frame update
     void Start()
     {
